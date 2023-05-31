@@ -1,0 +1,32 @@
+{
+	"description": "Prevents Reddit from opening the documents version of i.redd.it by modifing the Request Header: Accept",
+	"manifest_version": 3,
+	"name": "Reddit Image Fix",
+	"version": "1.1",
+	"homepage_url": "https://thesecatsdonotexist.com",
+	"icons": {
+		"48": "icons/badreddit-48.png"
+	},
+	"action": {
+		"default_icon": {
+			"48": "icons/badreddit-48.png",
+			"32": "icons/badreddit-32.png"
+		}
+	},
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"permissions": [
+		"webRequest",
+		"webRequestBlocking"
+	],
+	"host_permissions": [
+		"https://i.redd.it/*"
+	],
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{8790408f-056a-434d-80f2-5b14cfd35e82}",
+			"strict_min_version": "109.0"
+		}
+	}
+}
